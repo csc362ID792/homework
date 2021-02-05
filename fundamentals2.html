@@ -1,0 +1,32 @@
+<!-- fundamentals2.html -->
+
+<body>
+  <svg id="chart" width="1000" height="300"></svg>
+  <script src = "https://d3js.org/d3.v5.min.js"></script>
+  <script>
+    const array = [92, 56, 14, 73, 22, 38, 93, 45, 55];
+    const copy = [...array];
+    copy.sort();
+
+    d3.select("#chart")
+      .selectAll("circle")
+      .data(array)
+      .enter()
+      .append("circle")
+        .attr("r", d => d/2)
+        .attr("cy", 100)
+        .attr("cx", d => array.indexOf(d) * 100 + 50)
+        .style("fill", "blue")
+
+    setTimeout(function() {
+      d3.select("#chart").selectAll("circle")
+        .data(array)
+        .transition().duration(1500)
+          .attr("r", d => d/2)
+          .attr("cy", 100)
+          .attr("cx", d => copy.indexOf(d) * 100 + 50)
+          .style("fill", "pink")
+    }, 2000)
+  </script>
+
+</body>
