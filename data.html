@@ -1,0 +1,93 @@
+<!--
+Sarah Hancock and Izzy Moody
+-->
+
+<body>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <!-- Set up basic webpage structure -->
+  <div id="header"></div>
+  <div id="nominal"></div>
+  <div id="ordinal"></div>
+  <div id="interval"></div>
+  <div id="ratio"></div>
+
+  <style>
+
+    .yellow {
+        color: #FF1244;
+        background-color: #A7FEA2;
+        border: 3px #FF1244;
+        border-style: dotted dashed solid double;
+    }
+
+    .magenta {
+        color: #360A9A;
+        background-color: #F1ACFF;
+        border: 3px solid #360A9A;
+    }
+    .green {
+        color: black;
+        background-color: #A1F2FF;
+        border: 3px dashed black;
+    }
+    .purple {
+        color: white;
+        background-color: #FF1D98;
+        border: 3px double white;
+    }
+    .blue {
+        color: #FFD9F8;
+        background-color: #492DFF;
+        border: 3px dotted #FFD9F8;
+    }
+
+  </style>
+
+  <script>
+
+    d3.select("#header")
+      .classed("yellow", true)
+      .append("h1")
+      .text("NOIR Guide");
+
+    d3.select("#nominal")
+      .classed("magenta", true)
+      .append("h2")
+      .text("Nominal");
+
+    d3.select("#nominal")
+      .insert("p")
+      .text("Nominal data typically relies on labels, names, or categories. Examples include hair color, college major, gender, etc.");
+
+    d3.select("#ordinal")
+      .classed("green", true)
+      .append("h2")
+      .text("Ordinal");
+
+    d3.select("#ordinal")
+      .insert("p")
+      .text("Ordinal data typically considers things that can be ordered. Examples include Likert scale, education level, etc.")
+
+    d3.select("#interval")
+      .classed("purple", true)
+      .append("h2")
+      .text("Interval");
+
+    d3.select("#interval")
+      .insert("p")
+      .text("Interval data deals with real numbers on a numeric scale. The numbers are ordered and there is an exact difference of things. There is no true zero. Examples include temperature, time, etc. ")
+
+    d3.select("#ratio")
+      .classed("blue", true)
+      .append("h2")
+      .text("Ratio");
+
+    d3.select("#ratio")
+      .insert("p")
+      .text("Similar to interval data, ratio data is numeric and ordered. However, it has a true zero making it impossible for values to be negative. Examples include height, weight, etc.")
+
+
+  </script>
+
+</body>
