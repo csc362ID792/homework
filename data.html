@@ -1,0 +1,57 @@
+<!--
+Sarah Hancock and Izzy Moody
+-->
+
+<body>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <!-- Set up basic webpage structure -->
+  <div id="header"></div>
+  <div id="nominal"></div>
+  <div id="ordinal"></div>
+  <div id="interval"></div>
+  <div id="ratio"></div>
+
+  <style>
+    .red {
+        color: white;
+        background-color: #e41a1c;
+    }
+    .green {
+        color: #4daf4a;
+    }
+    .blue {
+        color: white;
+        background-color: #377eb8;
+    }
+    .purple {
+        color: #984ea3;
+    }
+  </style>
+
+  <script>
+
+    d3.select("#header")
+      .append("h1")
+      .text("NOIR Guide")
+
+    d3.select("#nominal")
+      .append("p")
+      .text("Nominal: Nominal data typically relies on labels, names, or categories. Examples include hair color, college major, etc.")
+
+    d3.select("#ordinal")
+      .append("p")
+      .text("Ordinal: Ordinal data typically considers things that can be ordered. Examples include Likert scale, education level, etc.")
+
+    d3.select("#interval")
+      .append("p")
+      .text("Interval: ")
+
+    d3.select("#ratio")
+      .append("p")
+      .text("Ratio: ")
+
+
+  </script>
+
+</body>
