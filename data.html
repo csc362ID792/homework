@@ -1,5 +1,5 @@
 <!--
-Sarah Hancock and Izzy Moody
+A webpage with explanations and examples of the four data types (NOIR)
 -->
 
 <body>
@@ -45,12 +45,12 @@ Sarah Hancock and Izzy Moody
   </style>
 
   <script>
-
+    //header section
     d3.select("#header")
       .classed("yellow", true)
       .append("h1")
       .text("NOIR Guide");
-
+    //nominal section
     d3.select("#nominal")
       .classed("magenta", true)
       .append("h2")
@@ -59,7 +59,7 @@ Sarah Hancock and Izzy Moody
     d3.select("#nominal")
       .insert("p")
       .text("Nominal data typically relies on labels, names, or categories. Examples include hair color, college major, gender, etc.");
-
+    //ordinal section
     d3.select("#ordinal")
       .classed("green", true)
       .append("h2")
@@ -68,7 +68,7 @@ Sarah Hancock and Izzy Moody
     d3.select("#ordinal")
       .insert("p")
       .text("Ordinal data typically considers things that can be ordered. Examples include Likert scale, education level, etc.")
-
+    //interval section
     d3.select("#interval")
       .classed("purple", true)
       .append("h2")
@@ -77,7 +77,7 @@ Sarah Hancock and Izzy Moody
     d3.select("#interval")
       .insert("p")
       .text("Interval data deals with real numbers on a numeric scale. The numbers are ordered and there is an exact difference of things. There is no true zero. Examples include temperature, time, etc. ")
-
+    //ratio section
     d3.select("#ratio")
       .classed("blue", true)
       .append("h2")
